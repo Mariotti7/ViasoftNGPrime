@@ -8,16 +8,12 @@ import {TabViewModule} from 'primeng/tabview';
 import {CarouselModule} from 'primeng/carousel';
 import {ContextMenuModule} from 'primeng/contextmenu';
 import {ChartModule} from 'primeng/chart';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { MainComponent } from './components/main/main.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    MainComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -26,7 +22,8 @@ import { MainComponent } from './components/main/main.component';
     TabViewModule,
     CarouselModule,
     ContextMenuModule,
-    ChartModule
+    ChartModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

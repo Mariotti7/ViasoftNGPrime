@@ -1,0 +1,19 @@
+export class NotaFiscalEletronica{
+  public id!: number
+  public colunas!: string
+  public linhaImparAM!: string
+  public linhaParBA!: string
+  public linhaImparCE!: string
+  public linhaParGO!: string
+  public linhaImparMG!: string
+  public linhaParMS!: string
+  public linhaImparMT!: string
+  public linhaParPE!: string
+  public linhaImparPR!: string
+  public linhaParRS!: string
+  public linhaImparSP!: string
+  public linhaParSVAN!: string
+  public linhaImparSVRS!: string
+  public linhaParSVCAAN!: string
+  public linhaImparSVCRRS!: string
+}

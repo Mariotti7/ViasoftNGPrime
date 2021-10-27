@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NotaFiscalEletronica } from './model/model';
+import { ServiceService } from './service/service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,33 +8,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'primeng-sandbox';
+  viasoft = 'https://viasoft.com.br/'
+  link = 'http://www.nfe.fazenda.gov.br/portal/disponibilidade.aspx';
+  front = 'https://github.com/Mariotti7/ViasoftNGPrime';
+  back = 'https://github.com/Mariotti7/ViasoftNotaFiscal';
+  titulo= `SISTEMA VIASOFT NOTA FISCAL ELETRÔNICA`;
 
   items = [
-    { vin: 'r3278r2', year: 2010, brand: 'Audi', color: 'Black' },
-    { vin: 'jhto2g2', year: 2015, brand: 'BMW', color: 'White' },
-    { vin: 'h453w54', year: 2012, brand: 'Honda', color: 'Blue' },
+    {brand: 'Projeto Incompleto'},
+    {brand: 'Integração em manutenção'},
+    {brand: 'Web Scraping falhou'},
   ];
 
-  data: any;
+  buscarTodos!: NotaFiscalEletronica[]
 
-    constructor() {
-        this.data = {
-            labels: ['A','B','C'],
-            datasets: [
-                {
-                    data: [300, 50, 100],
-                    backgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ],
-                    hoverBackgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ]
-                }]
-            };
+    constructor( private service: ServiceService) {
+
+    }
+    ngOnit(){
+      window.scroll(0,0)
+    }
+
+    findAll(){
+      this.service.findAll().subscribe((resp: NotaFiscalEletronica[])=>{
+        this.buscarTodos = resp
+
+      })
     }
 }

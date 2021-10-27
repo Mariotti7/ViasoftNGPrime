@@ -1,14 +1,14 @@
 <div>
   <p-tabView>
-    <p-tabPanel header="SISTEMA VIASOFT NOTA FISCAL ELETRÔNICA">
+    <p-tabPanel header="{{titulo}}">
     </p-tabPanel>
 </p-tabView>
 </div>
 <div>
-  <p-tabView>
-    <p-tabPanel header="Header 1"> Content 1 </p-tabPanel>
-    <p-tabPanel header="Header 2"> Content 2 </p-tabPanel>
-    <p-tabPanel header="Header 3"> Content 3 </p-tabPanel>
+  <p-tabView >
+    <p-tabPanel header="Site Nota Fiscal" > <a href="{{link}}" target="blank" class="link">Nota Fiscal Eletronica</a> </p-tabPanel>
+    <p-tabPanel header="Projeto Front End"> <a href="{{front}}" target="blank" class="link">Repositório Front-End</a> </p-tabPanel>
+    <p-tabPanel header="Projeto Back End"> <a href="{{back}}" target="blank" class="link">Repositório Back-End</a> </p-tabPanel>
   </p-tabView>
 </div>
 <br />
@@ -19,9 +19,6 @@
 </div>
 <br />
 <div>
-  <button type="button" pButton label="Buscar"></button>
+ <button type="button" pButton label="Buscar" onclick="findAll()"></button>
 </div>
-<div>
-  <p-chart type="pie" [data]="data"></p-chart>
-
-</div>
+<footer><a href="{{ viasoft }}">Oferecimento Viasoft</a></footer>
